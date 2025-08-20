@@ -1,0 +1,21 @@
+## BMI是体重指数 它通过将个体的体重(以千克为单位)除以身高(以米为单位)的平方来计算得出,即BMI=体重(kg)/身高(m)^2
+
+user_weight = float(input("请输入您的体重(单位是kg)："))
+user_height = float(input("请输入您的身高(单位是m)："))
+user_BMI = user_weight / (user_height ** 2)
+print("您的BMI值是:" + str(user_BMI))
+
+#偏瘦:user_BMI <= 18.5
+#正常:18.5 < user_BMI <= 25
+#偏胖:25 < user_BMI <= 30
+#肥胖:user_BMI > 30
+
+if user_BMI <= 18.5:
+    print("您的体重偏瘦")
+elif 18.5 < user_BMI <= 25:
+    print("您的体重正常")
+elif 25 < user_BMI <= 30:
+    print("您的体重偏胖")
+else:
+    print("您的体重肥胖")
+
